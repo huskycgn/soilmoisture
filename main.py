@@ -36,6 +36,7 @@ def get_moisture():
     else:
         return "trocken"
 
+write_soilmoisture()
 
 GPIO.cleanup()
 
