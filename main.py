@@ -16,7 +16,7 @@ def write_soilmoisture(table) -> None:
     connection = mariadb.connect(
         host=db_host, user=db_user, password=db_pass, database=db_name
     )
-    statement = f"INSERT INTO {table} (time, tank) VALUES('{getutc()}', '{get_moisture()}');"
+    statement = f"INSERT INTO {table} (time, state) VALUES('{getutc()}', '{get_moisture()}');"
 
     cursor = connection.cursor()
     cursor.execute(statement)
