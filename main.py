@@ -27,10 +27,12 @@ def get_moisture():
 
     GPIO.setmode(GPIO.BCM)
 
-    inputpin = 2
+    inputpin = 4
 
     GPIO.setup(inputpin, GPIO.IN)
     state = GPIO.input(inputpin)
+
+    print(state)
 
     if state == 1:
         return "feucht"
@@ -40,6 +42,3 @@ def get_moisture():
 write_soilmoisture("soil")
 
 GPIO.cleanup()
-
-
-
